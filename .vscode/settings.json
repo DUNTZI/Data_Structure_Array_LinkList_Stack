@@ -1,0 +1,18 @@
+{
+    "database-client.autoSync": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "code-runner.runInTerminal": true,
+    "files.autoSave": "afterDelay",
+
+    // Compile and run all C++ files in DSTR project
+    "code-runner.executorMap": {
+       "cpp": "g++ HospitalSystem/AmbulanceDispatcher.cpp HospitalSystem/DataStructures.cpp HospitalSystem/EmergencyOfficer.cpp HospitalSystem/main.cpp HospitalSystem/PatientClerk.cpp HospitalSystem/SupplyManager.cpp HospitalSystem/Utils.cpp -std=c++17 -O2 -o main && ./main"
+        
+    },
+
+    "code-runner.saveFileBeforeRun": true,
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "iostream": "cpp"
+    }
+}
