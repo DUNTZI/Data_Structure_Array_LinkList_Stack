@@ -3,41 +3,6 @@
 #include <iomanip> // For formatting output
 
 // ----------------------------------------------------------------------------
-// JUSTIFICATION FOR DATA STRUCTURE SELECTION
-// ----------------------------------------------------------------------------
-//
-// Role 1: PatientQueue (Standard Queue - FIFO)
-// Why: A standard Queue is used for the Patient Admission Clerk because it
-// follows the First-In, First-Out (FIFO) principle. This perfectly models a
-// real-world waiting line, where the patient who arrives first (admitted)
-// is the first one to be seen (discharged).
-//
-// Role 2: SupplyStack (Standard Stack - LIFO)
-// Why: A Stack is used for the Medical Supply Manager because it follows the
-// Last-In, First-Out (LIFO) principle. This models how supplies are often
-// stored: new stock (Add Supply) is placed on top of old stock, and the
-// "last added" or topmost item is the first one used (Use Supply).
-//
-// Role 3: EmergencyPriorityQueue (Priority Queue)
-// Why: A Priority Queue is essential for the Emergency Department. Patients
-// are not treated in the order they arrive (like a normal queue) but based on
-// the severity of their condition. This data structure ensures that when a
-// new case is logged, it is placed in the queue based on its priority level,
-// and the "Process Most Critical Case" function always removes the patient
-// with the highest priority (e.g., priority level 1).
-//
-// Role 4: AmbulanceCircularQueue (Circular Queue)
-// Why: A Circular Queue is ideal for the Ambulance Dispatcher. The goal is
-// "continuous rotation" and "equal duty time." A circular queue (implemented
-// with an array) allows ambulances to be "rotated" efficiently. When an
-// ambulance completes its shift (dequeue), it is immediately added to the
-// back of the line (enqueue) to wait for its next turn. This ensures a
-// continuous loop and fair scheduling.
-//
-// ----------------------------------------------------------------------------
-
-
-// ----------------------------------------------------------------------------
 // PatientQueue Implementation
 // ----------------------------------------------------------------------------
 
