@@ -23,6 +23,7 @@ int getIntInput(const std::string& prompt) {
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             }
+            break; // Valid integer input
         } else {
             std::cout << "Invalid input. Please enter a number.\n";
             std::cin.clear();
